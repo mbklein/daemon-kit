@@ -1,0 +1,28 @@
+# STOMP client configuration file
+
+# These values will be used to configure the stomp gem, any values
+# omitted will let the gem use it's own defaults.
+
+# The configuration specifies the following keys:
+# * login    - Login name for the STOMP server
+# * passcode - Passcode for the STOMP server
+# * host     - Hostname where the broker is running
+# * port     - Port where the broker is running
+# * reliable - Block for messages
+# * timeout  - Timeout
+
+defaults: &defaults
+  login:    ""
+  passcode: ""
+  host:     localhost
+  port:     61613
+  reliable: false
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
